@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 data/*
+input/
+output/
+dev_script.R
+curl_session.R
