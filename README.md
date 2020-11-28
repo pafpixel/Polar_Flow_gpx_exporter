@@ -34,19 +34,9 @@ Run from folder with the gps_converter_main.R and functions.R
 
     Rscript --vanilla gps_converter_main.R input_path output_path
 
-<<<<<<< HEAD
 * The Converter will expect a .json or .html file with the structure provided by flow.polar.com
 * The converter will skip all files without recorded gps tracks, so ypu can leave them in the folder...
 
-=======
-The Converter will expect a .json or .html file with the structure provided by flow.polar.com
-
-**Coming next:**
-* Exporting track from your history via login & curl
-
-**Open questions:**
-* Any ideas how to get a list of all your Favorite-IDs?
 
 **Known issues**
-* GPX is not comaptible with Garmin connect. Since their requirements are not well documented, I'm stuck here. Help is appreciated.
->>>>>>> a90c7942aad31b7c1a7fa9ae2fa90625d49abe30
+* GPX is not comaptible with Garmin connect. Since their requirements are not well documented, I'm stuck here. Any advise is appreciated.
