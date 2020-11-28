@@ -48,7 +48,6 @@ convertPolarObject <- function(polar_object, file) {
   return(gpx_string)
 }
 
-output_path = "output"
 writeGpxToDisk <- function(gpx_string, file, output_path) {
   filename <- paste(output_path,"/" ,substr(file, 1, nchar(file)-4), "gpx", sep = "")
   cat(gpx_string, file = filename, sep = "")
