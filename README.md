@@ -19,6 +19,7 @@ You need to specify the inputfolder and the outputfolder when running the script
 If no output folder is specified, the files are saved in the input folder.
 
 **Run the converter:**
+Run from folder with the gps_converter_main.R and functions.R
 
     Rscript --vanilla gps_converter_main.R input output
 
