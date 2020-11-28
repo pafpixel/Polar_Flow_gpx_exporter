@@ -1,15 +1,12 @@
 #!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
 
-# for_dev:
-args = c("input", "output")
-
 require("jsonlite")
 
 # Functions
 source("functions.R")
 
-
+######################
 # test if there is at least one argument (input): if not, return an error
 if (length(args)==0) {
   stop("At least an input-folder must be provided.n", call.=FALSE)
