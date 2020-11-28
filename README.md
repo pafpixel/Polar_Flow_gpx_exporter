@@ -7,8 +7,9 @@ You can however
 **How To:**
 * Got to Favorites
 * Click on the desired item
-* Your browser sends a request to: 
-* Reponse is a jsonobject which you can save and use as input for this converter.
+* Your browser sends a request to: https://flow.polar.com/api/favorites/exerciseTarget/123456789
+* 123456789 is the unique ID of your route
+* Reponse is a json object which you can save and use as input for this converter.
 
 
 
