@@ -26,7 +26,7 @@ If no output folder is specified, the files are saved in the input folder.
 
 Run from folder with the gps_converter_main.R and functions.R
 
-    Rscript --vanilla gps_converter_main.R input output
+    Rscript --vanilla gps_converter_main.R input_path output_path
 
 The Converter will expect a .json or .html file with the structure provided by flow.polar.com
 
