@@ -34,3 +34,6 @@ Coming next:
 
 Open questions:
 * Any ideas how to get a list of all your Favorite-IDs?
+
+Known issues
+* GPX is not comaptible with Garmin connect. Since their requirements are not well documented, I'm stuck here. Help is appreciated.
