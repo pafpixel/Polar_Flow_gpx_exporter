@@ -55,7 +55,6 @@ convertPolarObject <- function(polar_object, file) {
   if (!is.null(polar_object$gpsRoute)){
     # For objects extracted from favorites
     timestamp <- Sys.time()
-    
     for(i in 1:length(polar_object$gpsRoute$waypoints)){
       current_wp <- polar_object$gpsRoute$waypoints[[i]]
       wp_string <- paste0(
@@ -65,13 +64,28 @@ convertPolarObject <- function(polar_object, file) {
         "<time>",timestamp+i,"</time>\n",
         "</trkpt>\n"
       )
-      
       wp_strings[[i]] <- wp_string
     }
     
+  } else if (!is.null(polar_object$exercises)) {
+    # skip sports like indoor cycling without track
+    # For objects from the official polar data export
+    if (!is.null(polar_object$exercises[[1]]$samples$recordedRoute)) {
+      for(i in 1:length(polar_object$exercises[[1]]$samples$recordedRoute)){
+        current_wp <- polar_object$exercises[[1]]$samples$recordedRoute[[i]]
+        wp_string <- paste0(
+          '<trkpt lat="', format(round(current_wp$latitude,8),nsmall = 8),
+          '" lon="', format(round(current_wp$longitude,8),nsmall = 8),'">\n',
+          "<ele>", round(current_wp$altitude, digits = 4), "</ele>\n",
+          "<time>",current_wp$dateTime,"</time>\n",
+          "</trkpt>\n"
+        )
+        wp_strings[[i]] <- wp_string
+      }
+    } #else {next}
+    
   } else {
     # For objects extracted from session html
-    
     for(i in 1:length(polar_object)){
       current_wp <- polar_object[[i]]
       wp_string <- paste0(
@@ -80,7 +94,6 @@ convertPolarObject <- function(polar_object, file) {
         "<time>",as.POSIXct(polar_object[[1]][[2]] / 1000, origin="1970-01-01"),"</time>\n",
         "</trkpt>\n"
       )
-      
       wp_strings[[i]] <- wp_string
     }
   }
