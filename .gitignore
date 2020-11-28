@@ -6,4 +6,6 @@ data/*
 input/
 output/
 dev_script.R
+dev_sessionparser.R
 curl_session.R
+tests.R

@@ -3,16 +3,20 @@
 Currently it is not possible to export your favorite tracks or tracks from your hsitory from flow.polar.com.
 
 You can however 
-* add tracks from your history to your favorits
+* extract the complete html of your session (including the data)
 * extract a json-string from your favorite routes on flow.polar.com with 500 gps-waypoints.
 
-**How To:**
+**How To export favorites:**
 * Got to Favorites
 * Click on the desired item
 * Your browser sends a request to: https://flow.polar.com/api/favorites/exerciseTarget/123456789
 * 123456789 is the unique ID of your route
 * Reponse is a json object which you can save and use as input for this converter.
 
+**How to export Session GPX:**
+* Go to the overview of a session, e.g. https://flow.polar.com/training/analysis/123456789
+* save page as html (file might be a .htm - that's fine)
+* put htm / html in input folder
 
 
 You need to specify the inputfolder and the outputfolder when running the script.
@@ -23,9 +27,10 @@ Run from folder with the gps_converter_main.R and functions.R
 
     Rscript --vanilla gps_converter_main.R input output
 
+The Converter will expect a .json or .html file with the structure provided by flow.polar.com
 
 Coming next:
-* Directly exporting track from your history
+* Exporting track from your history via login & curl
 
 Open questions:
-* Any ideas how to get a list of all your Favorit-IDs?
+* Any ideas how to get a list of all your Favorite-IDs?

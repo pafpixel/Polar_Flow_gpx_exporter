@@ -2,6 +2,7 @@
 args = commandArgs(trailingOnly=TRUE)
 
 require("jsonlite")
+require("stringr")
 
 # Functions
 source("functions.R")
@@ -29,12 +30,13 @@ files <- list.files(paste0(args[1],"/"), full.names = F)
 
 # Do conversion
 for(file in files) {
-  print(file)
+  print(paste0("converting: ", file))
   convertJson(file, 
               input_path = paste0(args[1],"/"), 
               output_path = paste0(args[2],"/")
               )
 }
 
+print(paste0("Finished converting ",length(files)," files"))
 
 
