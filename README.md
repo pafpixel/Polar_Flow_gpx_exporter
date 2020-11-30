@@ -32,7 +32,11 @@ If no output folder is specified, the files are saved in the input folder.
 
 Run from folder with the gps_converter_main.R and functions.R
 
+Linux / Mac
     Rscript --vanilla gps_converter_main.R input_path output_path
+    
+Windows be like:
+    "C:\Program Files\R\R-4.0.2\bin\Rscript.exe" --vanilla gps_converter_main.R input
 
 * The Converter will expect a .json or .html file with the structure provided by flow.polar.com
 * The converter will skip all files without recorded gps tracks, so ypu can leave them in the folder...
