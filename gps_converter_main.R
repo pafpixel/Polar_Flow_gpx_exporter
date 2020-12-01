@@ -1,8 +1,11 @@
 #!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
 
-require("jsonlite")
-require("stringr")
+# require("jsonlite")
+# require("stringr")
+
+if(!require("jsonlite"))install.packages("jsonlite")
+if(!require("stringr"))install.packages("stringr")
 
 # Functions
 source("functions.R")
